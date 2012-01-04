@@ -1400,6 +1400,7 @@ window.MediaElement = mejs.MediaElement;
 			});
 		},
 		changeSkin: function(className) {
+			if (! this.container) return; // ios
 			this.container[0].className = 'mejs-container ' + className;
 			this.setPlayerSize();
 			this.setControlsSize();
